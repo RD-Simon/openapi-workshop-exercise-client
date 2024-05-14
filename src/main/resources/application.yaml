@@ -1,0 +1,24 @@
+
+
+server:
+  port: 8081
+
+spring:
+  application:
+    name: rest-client
+
+management:
+  endpoint:
+    env:
+      show-values: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    enabled-by-default: true
+
+bike:
+  client:
+    basepath: http://localhost:8080/bike-rental/v1
+    api:
+      key: asdf
